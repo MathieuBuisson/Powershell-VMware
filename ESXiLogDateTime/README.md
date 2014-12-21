@@ -1,4 +1,4 @@
-Esxi log files are plain text, which makes them painful to process with object-oriented languages like Powershell.
+Esxi log files are plain text, which makes them quite difficult to process with Powershell.
 This Powershell module converts each line in ESXi log files into a Powershell object, allowing further processing.
 This module contains 3 cmdlets : Get-ESXiLogWithDate, Convert-ESXiLogToLocalTime and Measure-ESXiLogTimeSpan.
 
