@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Configuration>
+    <ViewDefinitions>
+    <View>
+            <Name>Default</Name>
+            <ViewSelectedBy>
+                <TypeName>ESXi.LogEntry</TypeName>
+            </ViewSelectedBy>            
+            <TableControl>
+                <TableHeaders>
+                    <TableColumnHeader>
+                        <Width>19</Width>
+                    </TableColumnHeader>
+                    <TableColumnHeader>
+                        <Label> LogMessage</Label>
+                    </TableColumnHeader>
+                </TableHeaders>
+                <TableRowEntries>
+                    <TableRowEntry>
+                        <TableColumnItems>
+                            <TableColumnItem>
+                                <PropertyName>TimeStamp</PropertyName>
+                            </TableColumnItem>
+                            <TableColumnItem>
+                                <PropertyName>LogMessage</PropertyName>
+                            </TableColumnItem>
+                        </TableColumnItems>
+                    </TableRowEntry>
+                </TableRowEntries>
+            </TableControl>
+        </View>
+    </ViewDefinitions>
+</Configuration>
