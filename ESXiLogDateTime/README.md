@@ -1,4 +1,4 @@
-Description :
+DESCRIPTION :
 
 Esxi log files are plain text, which makes them quite difficult to process with Powershell.
 This Powershell module converts each line in ESXi log files into a Powershell object, allowing further processing.
@@ -25,7 +25,7 @@ Measure-ESXiLogTimeSpan takes one or more objects of type ESXi.LogEntry, piped f
 Convert-ESXiLogToLocalTime cmdlets and measures the duration covered by the input logs.
 It outputs one object of the type : System.TimeSpan and the precision is to the second.
 
-Usage :
+USAGE :
 
 Requires Powershell version 3.
 
