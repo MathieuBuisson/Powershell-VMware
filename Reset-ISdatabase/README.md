@@ -19,21 +19,34 @@ default configuration.
 
 PARAMETERS :
 
--NoPrompt
+-NoPrompt :
+
 By default, the script prompts you to confirm that you understand the potential consequences of resetting
 the Inventory Service database.
 If you want to suppress this prompt, use the -NoPrompt parameter.
--DBpath
+
+-DBpath :
+
 Allows you to specify the path to the Inventory Service Database, if it's not the default path.
--ScriptsPath
+
+-ScriptsPath :
+
 Allows you to specify the path to the Inventory Service Scripts folder, if it's not the default path.
--vCenterPort
+
+-vCenterPort :
+
 Allows you to specify the vCenter HTTPS port, if it's not the default.
--ISport
+
+-ISport :
+
 Allows you to specify the Inventory Service port, if it's not the default.
--LookupServicePort
+
+-LookupServicePort :
+
 Allows you to specify the Lookup Service port, if it's not the default.
--Verbose
+
+-Verbose :
+
 By default, the function doesn't display much output on the console while running.
 If you want the function to display what it's doing on the console, use the -Verbose parameter
 
