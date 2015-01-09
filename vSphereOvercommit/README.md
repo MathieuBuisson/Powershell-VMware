@@ -33,7 +33,7 @@ The same as for Get-CPUOvercommit
 
 GET-STORAGEOVERCOMMIT :
 
-Obtains the used space, provisioned space and capacity for one or more datastores (or datastore clusters) and compares them to evaluate storage overcommitment.
+Obtains the used space, provisioned space and capacity for one or more datastores and compares them to evaluate storage overcommitment.
 
 "Storage overcommitment" is evaluated by comparing the provisioned space for all VMs in the datastore (or datastore cluster) with its capacity.
 
