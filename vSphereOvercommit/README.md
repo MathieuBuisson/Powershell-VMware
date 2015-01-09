@@ -45,7 +45,7 @@ PARAMETERS :
 VIServer : To specify the vCenter Server to connect PowerCLI to.
 The default is Localhost.
 
-Datastore : To specify one or more datastores or datastore clusters. The default will query all datastores managed by the vCenter Server you are connected to in PowerCLI.
+Datastore : To specify one or more datastores. The default will query all datastores managed by the vCenter Server you are connected to in PowerCLI.
 This parameter has an alias : "Storage".
 
 Cluster : Outputs global values for the specified datastore cluster
