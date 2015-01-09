@@ -272,11 +272,11 @@ function Get-MemoryOvercommit {
 function Get-StorageOvercommit {
 <#
 .SYNOPSIS
-    Obtains the used space, provisioned space and capacity for one or more datastores (or datastore clusters) to evaluate storage overcommitment.
+    Obtains the used space, provisioned space and capacity for one or more datastores to evaluate storage overcommitment.
 
 
 .DESCRIPTION
-    Obtains the used space, provisioned space and capacity for one or more datastores (or datastore clusters) and compares them to evaluate storage overcommitment.
+    Obtains the used space, provisioned space and capacity for one or more datastores and compares them to evaluate storage overcommitment.
 
     "Storage overcommitment" is evaluated by comparing the provisioned space for all VMs in the datastore (or datastore cluster) with its capacity.
 
@@ -288,7 +288,7 @@ function Get-StorageOvercommit {
     The default is Localhost.
 
 .PARAMETER Datastore
-    To specify one or more datastores or datastore clusters.
+    To specify one or more datastores.
     The default will query all datastores managed by the vCenter Server you are connected to in PowerCLI.
     This parameter has an alias : "Storage".
 
