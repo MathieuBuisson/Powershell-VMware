@@ -9,7 +9,7 @@ Looks for the hp-ams VIB installed on one or more ESXi hosts and displays them i
 
 More information on this bug : http://kb.vmware.com/kb/2085618 .
 
-No output means that there is no ESXi host with the hp-ams VIB, or the installed version(s) of the hp-ams VIB(s) contain the fix.
+No output means that there is no ESXi host with the hp-ams VIB, or the installed version(s) of the hp-ams VIB(s) are not affected.
 
 PARAMETERS :
 
