@@ -98,7 +98,7 @@ function Find-BadHpAmsVib {
 					'Version' = $HpAmsVib.Version
 					'InstallDate' = $HpAmsVib.InstallDate
                     }
-					New-Object -TypeName PSObject -Property $Props
+		    New-Object -TypeName PSObject -Property $Props
                 }
             }
         }
