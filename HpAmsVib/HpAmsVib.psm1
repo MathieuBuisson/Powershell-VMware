@@ -91,12 +91,12 @@ function Find-BadHpAmsVib {
             
                     # Building the properties of our custom output object
                     $Props = [ordered]@{
-						'VMHost' = $VMhost.Name
-						'ID' = $HpAmsVib.ID
-						'Name' = $HpAmsVib.Name
-						'Vendor' = $HpAmsVib.Vendor
-						'Version' = $HpAmsVib.Version
-                        'InstallDate' = $HpAmsVib.InstallDate
+					'VMHost' = $VMhost.Name
+					'ID' = $HpAmsVib.ID
+					'Name' = $HpAmsVib.Name
+					'Vendor' = $HpAmsVib.Vendor
+					'Version' = $HpAmsVib.Version
+					'InstallDate' = $HpAmsVib.InstallDate
                     }
 					New-Object -TypeName PSObject -Property $Props
                 }
