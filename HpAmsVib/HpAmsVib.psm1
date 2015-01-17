@@ -196,7 +196,6 @@ function Remove-BadHpAmsVib {
             "5.1*" { $ProblemVersions = "500.10.0.0","500.9" }
             "5.5*" { $ProblemVersions = "550.10.0.0","550.9" }
             }
-            
 
             $Esxcli = Get-EsxCli -VMHost $VMhost
             $VibList = $Esxcli.software.vib.list()
