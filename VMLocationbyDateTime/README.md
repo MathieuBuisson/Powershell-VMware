@@ -1,12 +1,12 @@
 DESCRIPTION :
 
 This module contains 1 cmdlet : Get-VMHostbyDateTime .
-
 It requires Powershell version 3 (or later) and the PowerCLI 5.5 (or later).
 
 GET-VMHOSTBYDATETIME :
 
 Tracks on which host was one (or more) VM(s) over a date or time range.
+
 Useful to track VM location and migrations in a cluster where DRS is in fully automated mode.
 It shows when the VM has changed host , the source and destination host, and the reason of the move.
 
