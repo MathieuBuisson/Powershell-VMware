@@ -1,6 +1,7 @@
 DESCRIPTION :
 
-This module contains 1 cmdlet : Get-VMHostbyDateTime
+This module contains 1 cmdlet : Get-VMHostbyDateTime .
+
 It requires Powershell version 3 (or later) and the PowerCLI 5.5 (or later).
 
 GET-VMHOSTBYDATETIME :
