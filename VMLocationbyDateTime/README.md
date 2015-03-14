@@ -23,11 +23,11 @@ VM : To specify one or more VMs.
 
 After : To get the VM location(s) and migration(s) during a time range starting from the specified point in time.
 
-If no value is specified, the default is 180 days ago, which is the default retention policy for events in the vCenter database. The precision is up to the second and it is using the vCenter local time.
+  If no value is specified, the default is 180 days ago, which is the default retention policy for events in the   vCenter database. The precision is up to the second and it is using the vCenter local time.
 
 Before : To get the VM location(s) and migration(s) during a time range ending at the specified point in time.
 
-If no value is specified, the defaut is : now. The precision is up to the second and it is using the vCenter local time.
+  If no value is specified, the defaut is : now. The precision is up to the second and it is using the vCenter local time.
 
 
 CAUTION : The DateTime object formatting depends on the culture. Examples provided in the help were tested with the en-US culture. In this culture, the format is MM/dd/yy, this why "03/13/2015" can be cast as a valid DateTime object.
