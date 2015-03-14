@@ -9,7 +9,7 @@ GET-VMHOSTBYDATETIME :
 Tracks on which host was one (or more) VM(s) over a date or time range.
 
 Useful to track VM location and migrations in a cluster where DRS is in fully automated mode.
-It shows when the VM has changed host , the source and destination host, and the reason of the move.
+It shows when the VM has changed host, the source and destination host, and the reason of the move.
 
 If the source and destination hosts are the same for an output entry, the migration was a Storage vMotion.
 If the source host is empty for an output entry, it was not a migration, but a start or restart of the VM.
