@@ -92,23 +92,23 @@ function Get-StorageViewsReport {
 
     Begin {
         # Checking if the required PowerCLI snapin is loaded, if not, loading it
-        if(-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+        If(-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
             Add-PSSnapin VMware.VimAutomation.Core }
 
         Set-PowercliConfiguration -InvalidCertificateAction "Ignore" -DisplayDeprecationWarnings:$false -Confirm:$false | Out-Null
 
-        if (-not($defaultVIServer)) {
+        If (-not($defaultVIServer)) {
             Connect-VIServer $VIServer | Out-Null
         }
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
-        if (-not ($PSBoundParameters.ContainsKey('VM')) ) {
+        If (-not ($PSBoundParameters.ContainsKey('VM')) ) {
             $VM = Get-VM
         }
     }
     Process {
-        if ($PSCmdlet.ParameterSetName -eq "ByVM") {
+        If ($PSCmdlet.ParameterSetName -eq "ByVM") {
 
             foreach ($iVM in $VM) {
 
@@ -125,7 +125,7 @@ function Get-StorageViewsReport {
                 $ByVMObj
             }
         }
-        if ($PSCmdlet.ParameterSetName -eq "ByDatastore") {
+        If ($PSCmdlet.ParameterSetName -eq "ByDatastore") {
             
             $SnapView = Get-VM | Get-Snapshot | Get-View
 
@@ -153,7 +153,7 @@ function Get-StorageViewsReport {
                 $ByDatastoreObj
             }
         }
-        if ($PSCmdlet.ParameterSetName -eq "ByHost") {
+        If ($PSCmdlet.ParameterSetName -eq "ByHost") {
             
             foreach ($iHost in $Host) {
 
