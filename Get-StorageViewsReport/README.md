@@ -4,6 +4,8 @@ Obtains storage capacity and utilization information by datastore, by VM or by E
 This provides the same information as the Storage Views reports, feature which has been removed from vSphere 6.0.
 The default mode is by datastore.
 
+Requires PowerCLI 5.5 or later and Powershell 3.0 or later.
+
 
 PARAMETERS :
 
