@@ -13,7 +13,7 @@ It works for a vCenter Server Appliance with embedded Platform Services Controll
 
 It requires PowerCLI 5.8 or later because it uses the cmdlets **Get-OvfConfiguration** and **Import-VApp**.
 
-To get the default OVA file, first mount the vCenter Appliance ISO file (VMware_VCSA-all-6.0.0-xxxx.iso) and copy the file \Your_ISO_Content\vcsa\vmware-vcsa to a location of your choice. Then, rename the copy of the file vmware-vcsa to vmware-vcsa.ova .
+To get the default OVA file, first mount the vCenter Appliance ISO file (VMware_VCSA-all-6.0.0-xxxx.iso) and copy the file _**\Your_ISO_Content\vcsa\vmware-vcsa**_ to a location of your choice. Then, rename the copy of the file vmware-vcsa to vmware-vcsa.ova .
 
 The resulting VM is powered off.
 
