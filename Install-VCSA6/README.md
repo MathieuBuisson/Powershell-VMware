@@ -2,8 +2,7 @@
 
 This module contains 1 cmdlet : **Install-VCSA6** .
 
-Based on William Lam's scripts : Deployment-Embedded.ps1, Deployment-PSC.ps1 and Deployment-VCSA-Mgmt.ps1 in:  
-https://github.com/lamw/PowerCLI-Deployment
+Based on William Lam's scripts : Deployment-Embedded.ps1, Deployment-PSC.ps1 and Deployment-VCSA-Mgmt.ps1 in: https://github.com/lamw/PowerCLI-Deployment
 
 More information :  
 http://www.virtuallyghetto.com/2015/02/ultimate-automation-guide-to-deploying-vcsa-6-0-part-1-embedded-node.html
