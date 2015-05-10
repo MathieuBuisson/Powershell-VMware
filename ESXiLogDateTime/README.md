@@ -38,7 +38,8 @@ Requires Powershell version 3.
 To use this modules, the folder ESXiLogDateTime should be copied to C:\Program Files\WindowsPowerShell\Modules to leverage
 module auto-loading and to avoid having to edit the path of the root module file in the module manifest (ESXiLogDateTime.psd1).
 
-For the full help information and usage examples, run :
+For the full help information and usage examples, run :  
+
 `Help Get-ESXiLogWithDate -Full`  
 
 or  
