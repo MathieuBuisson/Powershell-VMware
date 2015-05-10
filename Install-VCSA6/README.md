@@ -72,9 +72,8 @@ The default is Localhost.
 **NTPServer :** To specify the NTP server which the vCenter Appliance will use to sync time.
     The default is : "0.pool.ntp.org".
 
-**DiskStorageFormat :** To specify the storage format for the disks of the imported VMs.
-    When you set this parameter, you set the storage format for all virtual machine disks in the OVF package.
-
-    This parameter accepts the following values : **Thin**, **Thick**, and **EagerZeroedThick**.
-    The default is **Thin**.
-    The vCenter Appliance has 11 virtual disks, so this parameter has a big impact on the storage space and the deployment time.
+**DiskStorageFormat :** To specify the storage format for the disks of the imported VMs.  
+When you set this parameter, you set the storage format for all virtual machine disks in the OVF package.  
+This parameter accepts the following values : **Thin**, **Thick**, and **EagerZeroedThick**.  
+The default is **Thin**.  
+The vCenter Appliance has 11 virtual disks, so this parameter has a big impact on the storage space and the deployment time.
