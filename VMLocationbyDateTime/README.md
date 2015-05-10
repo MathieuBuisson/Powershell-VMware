@@ -22,8 +22,7 @@ The default is Localhost.
 
 **VM :** To specify one or more VMs.
 
-**After :** To get the VM location(s) and migration(s) during a time range starting from the specified point in time.
-
+**After :** To get the VM location(s) and migration(s) during a time range starting from the specified point in time.  
 If no value is specified, the default is 180 days ago, which is the default retention policy for events in the   vCenter database.  
 The precision is up to the second and it is using the vCenter local time.
 
