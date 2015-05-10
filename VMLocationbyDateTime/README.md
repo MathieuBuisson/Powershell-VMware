@@ -2,6 +2,7 @@
 
 This module contains 1 cmdlet : **Get-VMHostbyDateTime** .  
 It requires Powershell version 3 (or later) and the PowerCLI 5.5 (or later).  
+
 For a better experience, it is recommended to use the module manifest **VMLocationbyDateTime.psd1** to automatically associate the custom formatting view **VMLocationbyDateTime.ps1xml** to the output object type : VMLocationbyDateTime.VMLocation.
 
 ##Get-VMHostbyDateTime :
@@ -31,7 +32,8 @@ The precision is up to the second and it is using the vCenter local time.
 If no value is specified, the defaut is : now. The precision is up to the second and it is using the vCenter local time.
 
 ###CAUTION :  
-The DateTime object formatting depends on the culture. Examples provided in the help were tested with the en-US culture. In this culture, the format is MM/dd/yy, this why "03/13/2015" can be cast as a valid DateTime object.
+The DateTime object formatting depends on the culture.  
+Examples provided in the help were tested with the en-US culture. In this culture, the format is MM/dd/yy, this why "03/13/2015" can be cast as a valid DateTime object.
 
 For other cultures, like en-GB or en-IE, the format is dd/MM/yy so "03/13/2015" cannot be cast as a valid DateTime.  
 You can use the cmdlet Get-Culture to obtain the culture of your current Powershell session.
