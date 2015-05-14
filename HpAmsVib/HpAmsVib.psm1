@@ -68,6 +68,8 @@ function Find-BadHpAmsVib {
         If ($PSBoundParameters.ContainsKey('Cluster')) {
             $VMhosts = Get-Cluster -Name $Cluster | Get-VMHost
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
     }
     Process {
     
@@ -184,6 +186,8 @@ function Remove-BadHpAmsVib {
         If ($PSBoundParameters.ContainsKey('Cluster')) {
             $VMhosts = Get-Cluster -Name $Cluster | Get-VMHost
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
     }
     Process {
     
