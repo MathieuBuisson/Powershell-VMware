@@ -106,6 +106,8 @@ function Get-StorageViewsReport {
         If (-not ($PSBoundParameters.ContainsKey('VM')) ) {
             $VM = Get-VM
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
     }
     Process {
         If ($PSCmdlet.ParameterSetName -eq "ByVM") {
