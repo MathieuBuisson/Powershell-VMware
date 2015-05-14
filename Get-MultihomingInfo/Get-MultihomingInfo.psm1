@@ -163,6 +163,9 @@ function Get-MultihomingInfo {
         Else {
              Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
+        
         If (-not ($PSBoundParameters.ContainsKey('VMhosts')) ) {
             $VMhosts = Get-VMHost
         }
