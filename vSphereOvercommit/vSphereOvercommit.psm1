@@ -65,6 +65,9 @@ function Get-CPUOvercommit {
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
+        
         If (-not ($PSBoundParameters.ContainsKey('VMhosts')) ) {
             $VMhosts = Get-VMHost
         }
@@ -198,6 +201,9 @@ function Get-MemoryOvercommit {
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
+        
         If (-not ($PSBoundParameters.ContainsKey('VMhosts')) ) {
             $VMhosts = Get-VMHost
         }
@@ -339,6 +345,9 @@ function Get-StorageOvercommit {
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
+        
         If (-not ($PSBoundParameters.ContainsKey('Datastore')) ) {
             $Datastore = Get-Datastore
         }
