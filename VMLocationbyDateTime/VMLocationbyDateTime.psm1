@@ -73,6 +73,9 @@ function Get-VMHostbyDateTime {
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
+        
         # Preparing a collection to store the output objects
         $LocationCollection = @()
     }
