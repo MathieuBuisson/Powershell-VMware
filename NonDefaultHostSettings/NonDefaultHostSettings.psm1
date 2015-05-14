@@ -73,7 +73,7 @@ function Get-NonDefaultAdvancedSettings {
     End {
     }
 }
-function Set-AdvancedSettingsToDefaults {
+function Set-AdvancedSettingsToDefault {
 
 <#
 .SYNOPSIS
@@ -94,17 +94,17 @@ function Set-AdvancedSettingsToDefaults {
     This parameter has 2 aliases : "Hosts" and "Servers".
 
 .EXAMPLE 
-    Set-AdvancedSettingsToDefaults
+    Set-AdvancedSettingsToDefault
 
     Sets the advanced settings which are not at their default value back to their default, for all ESXi hosts managed by the connected vCenter.
 
 .EXAMPLE 
-    Get-VMHost esxi55ga-3.vcloud.local | Set-AdvancedSettingsToDefaults
+    Get-VMHost esxi55ga-3.vcloud.local | Set-AdvancedSettingsToDefault
 
     Sets the advanced settings which are not at their default value back to their default, for the host esxi55ga-3.vcloud.local, using pipeline input.
 
 .EXAMPLE
-    Get-VMHost "ESXi55*" | Set-AdvancedSettingsToDefaults -WhatIf
+    Get-VMHost "ESXi55*" | Set-AdvancedSettingsToDefault -WhatIf
 
     Displays the modification(s) it would perform on the hosts which have a name starting with "ESXi55", without actually performing them.
 #>
