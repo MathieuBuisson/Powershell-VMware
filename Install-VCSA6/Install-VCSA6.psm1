@@ -176,6 +176,8 @@ http://www.virtuallyghetto.com/2015/02/ultimate-automation-guide-to-deploying-vc
         Else {
             Write-Verbose "Already connected the vCenter Server: $defaultVIServer" 
         }
+        # Clearing the default parameter values in the function's scope
+        $PSDefaultParameterValues.Clear()
     }
     Process {
         # Loading the OVA configuration into a variable for further manipulation
