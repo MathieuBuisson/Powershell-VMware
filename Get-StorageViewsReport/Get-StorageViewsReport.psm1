@@ -59,6 +59,13 @@ function Get-StorageViewsReport {
     Get-VMHost ESXi5* | Get-StorageViewsReport
     Obtains storage capacity and utilization information by ESXi host, for the hosts which have a name starting with ESXi5, using pipeline input.
 
+.NOTES
+    Author : Mathieu Buisson
+    
+.LINK
+    For the latest version of this module and its documentation, please refer to :
+    https://github.com/MathieuBuisson/Powershell-VMware/tree/master/Get-StorageViewsReport
+
 #>
 
 [cmdletbinding(DefaultParameterSetName="ByDatastore")]
