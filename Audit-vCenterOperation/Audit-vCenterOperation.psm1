@@ -65,7 +65,7 @@ function Audit-vCenterOperation {
 
     Begin {
         # Checking if the required PowerCLI snapin is loaded, if not, loading it
-        if(-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+        if (-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
             Add-PSSnapin VMware.VimAutomation.Core }
 
         Set-PowercliConfiguration -InvalidCertificateAction "Ignore" -DisplayDeprecationWarnings:$false -Confirm:$false | Out-Null
