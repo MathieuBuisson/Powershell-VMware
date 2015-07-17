@@ -1,14 +1,11 @@
 ##Description :
 
-This module contains one cmdlet : Audit-vCenterOperation. 
-It requires Powershell 3.0 (or later) and PowerCLI 5.5 (or later).
-
 When a problem appears in a vSphere environnment, we need to know what changed or what happened prior to the problem appearing, to troubleshoot it.
 
 Sometimes, the customer doesn’t know or is not sure.
 Sometimes, the customer says : “Nothing changed”, but we might not entirely trust him/her.
 
-There are cases where we know what happened but we are not sure if it was user-initiated action.
+There are cases where we know what happened but we are not sure if it was a user-initiated action.
 
 Also, we might need to track the actions initiated by a specific user.
 
@@ -16,8 +13,7 @@ To help get this information, the **Audit-vCenterOperation** cmdlet extracts rel
 
 It can filter the operations on a start date, an end date, the user who initiated the operations, the vCenter object(s)targeted by the operation, and the type of operations. 
 It outputs relevant vCenter events and user-friendly information from these events. 
-By default, the operations are sorted in chronological order to facilitate auditing and historical tracking of events or configuration changes.
-
+By default, the operations are sorted in chronological order to facilitate auditing and historical tracking of events or configuration changes. 
 
 Requires PowerCLI 5.5 or later and Powershell 3.0 or later. 
 
