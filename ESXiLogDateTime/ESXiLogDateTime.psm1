@@ -196,7 +196,7 @@ function Measure-ESXiLogTimeSpan {
     )
 
     Begin {
-    $LogEntryCollection = @()
+        $LogEntryCollection = @()
     }
 
     Process {
