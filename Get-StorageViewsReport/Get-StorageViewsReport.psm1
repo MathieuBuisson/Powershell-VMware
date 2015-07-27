@@ -86,8 +86,8 @@ function Get-StorageViewsReport {
         [Parameter(ValueFromPipeline = $True,
         ParameterSetName='ByDatastore',
         ValueFromPipelineByPropertyName=$True,Position=0)]   
-        [VMware.VimAutomation.ViCore.Impl.V1.DatastoreManagement.VmfsDatastoreImpl[]]$Datastore = (Get-Datastore),
-
+        [ValidateScript({ $_[0] -is [VMware.VimAutomation.ViCore.Impl.V1.DatastoreManagement.VmfsDatastoreImpl] -or $_[0] -is [VMware.VimAutomation.ViCore.Impl.V1.DatastoreManagement.NasDatastoreImpl] })]
+        $Datastore = (Get-Datastore),
 
         [Parameter(ParameterSetName='ByHost')]
         [switch]$ByHost,
