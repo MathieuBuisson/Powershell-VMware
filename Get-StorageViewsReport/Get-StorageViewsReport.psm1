@@ -106,7 +106,7 @@ function Get-StorageViewsReport {
         }
         Else {
             If (-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
-            Add-PSSnapin VMware.VimAutomation.Core
+                Add-PSSnapin VMware.VimAutomation.Core
             }
         }
         Set-PowercliConfiguration -InvalidCertificateAction "Ignore" -DisplayDeprecationWarnings:$false -Confirm:$false | Out-Null
