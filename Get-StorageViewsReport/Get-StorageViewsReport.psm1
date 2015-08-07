@@ -98,10 +98,17 @@ function Get-StorageViewsReport {
     )
 
     Begin {
-        # Checking if the required PowerCLI snapin is loaded, if not, loading it
-        If(-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
-            Add-PSSnapin VMware.VimAutomation.Core }
-
+        # Checking if the required PowerCLI snapin (or module) is loaded, if not, loading it
+        If (Get-Module VMware.VimAutomation.Core -ListAvailable -ErrorAction SilentlyContinue) {
+            If (-not (Get-Module VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+	        Import-Module VMware.VimAutomation.Core
+            }
+        }
+        Else {
+            If (-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+            Add-PSSnapin VMware.VimAutomation.Core
+            }
+        }
         Set-PowercliConfiguration -InvalidCertificateAction "Ignore" -DisplayDeprecationWarnings:$false -Confirm:$false | Out-Null
 
         If (-not($defaultVIServer)) {
