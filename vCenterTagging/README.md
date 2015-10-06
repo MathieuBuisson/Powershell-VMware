@@ -16,7 +16,7 @@ One use case is backing up all the tagging information from a vCenter Server bef
 **VIServer :** To specify the vCenter Server to connect PowerCLI to.  
 The default is Localhost.
 
-**Path :** To specify the path and name of the file the tagging data should be exported to. 
+**Path :** To specify the path and name of the file the tagging data should be exported to. 	
 This parameter is mandatory.
 
 
@@ -31,5 +31,5 @@ One use case is restoring all the tagging information from a vCenter Server afte
 **VIServer :** To specify the vCenter Server to connect PowerCLI to.  
 The default is Localhost.
 
-**Path :** To specify the path and name of the file the tagging data should be imported from. 
+**Path :** To specify the path and name of the file the tagging data should be imported from. 	
 This parameter is mandatory.
