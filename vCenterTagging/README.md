@@ -1,6 +1,7 @@
 ##Description :
 
-This module contains 2 cmdlets : **Export-TagAndAssignment** and **Import-TagAndAssignment**.
+This module contains 2 cmdlets : **Export-TagAndAssignment** and **Import-TagAndAssignment**. 
+
 It requires Powershell 3.0 (or later) and PowerCLI 5.5 R2 (or later).
 
 ##Export-TagAndAssignment :
