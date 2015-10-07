@@ -1,6 +1,13 @@
 ﻿#Requires -Version 3
 
 function Export-TagAndAssignment {
+	
+<#
+.SYNOPSIS
+    Exports all the tags, tag categories and tag assignments from a vCenter to a file. This file can be used later to import all the tags, categories and assignments back into a vCenter environment.
+.NOTES
+    Author : Mathieu Buisson
+#>
 
 [cmdletbinding()]
     param(
@@ -52,6 +59,13 @@ function Export-TagAndAssignment {
 }
 
 function Import-TagAndAssignment {
+	
+<#
+.SYNOPSIS
+    Imports all the tags, tag categories and tag assignments from a file to a vCenter Server.
+.NOTES
+    Author : Mathieu Buisson
+#>
 
 [cmdletbinding()]
     param(
