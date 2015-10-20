@@ -41,7 +41,6 @@
     Author : Mathieu Buisson
     
 #>
-
 [cmdletbinding()]
     param(
         [string]$VIServer = "localhost",
@@ -106,7 +105,6 @@
         If ($PSBoundParameters.ContainsKey('ExpandableReservation')) {
             $Spec.Config.MemoryAllocation.ExpandableReservation = $True
         }
-
 
         Foreach ($VMHost in $Host) {
 
