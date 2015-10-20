@@ -1,7 +1,7 @@
 ##Description :
 
 This module contains 1 cmdlet : **Set-VMHostRamDisk**. 		
-It work with PowerCLI 5.5 (or later).
+It works with PowerCLI 5.5 (or later).
 
 It configures the memory allocation (reservation, limit and whether the reservation is expandable) of a RAMDisk for one or more ESXi hosts.
 
