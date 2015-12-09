@@ -9,7 +9,10 @@ function Audit-vCenterOperation {
 .DESCRIPTION
     Obtains vCenter events and filters them to meaningful vCenter operations.
     It can filter the operations on a start date, an end date, the user who initiated the operations, the vCenter object(s) targeted by the operation, and the type of operations.
+
     It outputs relevant vCenter events and user-friendly information from these events.
+    Also, for the VM "reconfigure" operations, it adds a property "NewConfigSettings" to the output objects, which contains the changed VM setting(s) and the new value.
+
     By default, the operations are sorted in chronological order to facilitate auditing and historical tracking of events or configuration changes.
 
 .PARAMETER VIServer
@@ -64,13 +67,20 @@ function Audit-vCenterOperation {
     )
 
     Begin {
-        # Checking if the required PowerCLI snapin is loaded, if not, loading it
-        if (-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
-            Add-PSSnapin VMware.VimAutomation.Core }
-
+        # Checking if the required PowerCLI snapin (or module) is loaded, if not, loading it
+        If (Get-Module VMware.VimAutomation.Core -ListAvailable -ErrorAction SilentlyContinue) {
+            If (-not (Get-Module VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+	            Import-Module VMware.VimAutomation.Core
+            }
+        }
+        Else {
+            If (-not (Get-PSSnapin VMware.VimAutomation.Core -ErrorAction SilentlyContinue)) {
+                Add-PSSnapin VMware.VimAutomation.Core
+            }
+        }
         Set-PowercliConfiguration -InvalidCertificateAction "Ignore" -DisplayDeprecationWarnings:$false -Confirm:$false | Out-Null
 
-        if (-not($defaultVIServer)) {
+        If (-not($defaultVIServer)) {
             Connect-VIServer $VIServer | Out-Null
         }
         Else {
@@ -106,7 +116,7 @@ function Audit-vCenterOperation {
                     $FilteredActions = $SortedActions | Where-Object { $_.FullFormattedMessage -like "*Creat*" -and $_.FullFormattedMessage -notlike "*Snapshot*" }
                }
                "Reconfigure" {
-                    $FilteredActions = $SortedActions | Where-Object { $_.FullFormattedMessage -like "*Reconfigur*" -or $_.FullFormattedMessage -like "*Modif*" }
+                    $FilteredActions = $SortedActions | Where-Object { $_.FullFormattedMessage -like "*Reconfigur*" -or $_.FullFormattedMessage -like "*Modif*" -and $_.FullFormattedMessage -notlike "*Task*"}
                }
                "Remove" {
                     $FilteredActions = $SortedActions | Where-Object { $_.FullFormattedMessage -like "*Remov*" -and $_.FullFormattedMessage -notlike "*Snapshot*" }
@@ -148,6 +158,12 @@ function Audit-vCenterOperation {
 
         foreach ( $FilteredAction in $FilteredActions) {
 
+            # Extracting only the properties which have a value from the ConfigSpec property of events of the type VmReconfiguredEvent
+            # This will be used to get only settings which were changed for VM "reconfigure" operations
+            $NewConfigSettingsProps = $($FilteredAction.ConfigSpec) | Get-Member -MemberType Properties -ErrorAction SilentlyContinue | Select-Object -ExpandProperty Name
+            $NewConfigSettingsRelevantProps = $NewConfigSettingsProps | Where-Object { $($FilteredAction.ConfigSpec).$_ }
+            Write-Debug "$NewConfigSettingsRelevantProps"
+            
             # Building the properties of our custom output object
             $Props = [ordered]@{
 			    'Key' = $FilteredAction.Key
@@ -158,13 +174,14 @@ function Audit-vCenterOperation {
                 'Host' = $FilteredAction.Host.Name
                 'Vm' = $FilteredAction.Vm.Name
                 'Message' = $FilteredAction.FullFormattedMessage
+                'NewConfigSettings' = If ($FilteredAction.ConfigSpec) { $($FilteredAction.ConfigSpec) | Select-Object -Property $NewConfigSettingsRelevantProps }
             }
 		    $OutputObject = New-Object -TypeName PSObject -Property $Props
             $OutputObjectCollection += $OutputObject
         }
     }
     End {
-        Write-Verbose "Executed End block"
+        Write-Debug "Executing End block"
         Write-Verbose "`$FilteredActions contains $($FilteredActions.Count) events"
 
         $OutputObjectCollection
