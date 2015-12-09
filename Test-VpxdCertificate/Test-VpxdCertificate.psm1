@@ -59,8 +59,7 @@ function Test-VpxdCertificate {
     
 .LINK
     For the latest version of this module and its documentation, please refer to :
-    
-
+    https://github.com/MathieuBuisson/Powershell-VMware/tree/master/Test-VpxdCertificate
 #>
 
 [cmdletbinding()]
