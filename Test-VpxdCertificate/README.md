@@ -34,30 +34,28 @@ Authentication".
 * The signature hash algorithm must be SHA256, SHA384, or SHA512.
 
 The cmdlet performs a test for each of the requirement mentioned above and 
-outputs an object with a property corresponding to each of these test.
-The value of all these properties is either True or False. True means that the 
-certificate passed the corresponding test and False means that the certificate 
-failed the corresponding test.
+outputs an object with a property corresponding to each of these test.  
+The value of all these properties is either True or False.  
+True means that the certificate passed the corresponding test and False means that the certificate failed the corresponding test.
 
 ###Parameters :
 
 
 
-**CertFilePath :** To specify the full path of the certificate file to check.
+**CertFilePath :** To specify the full path of the certificate file to check.  
 The default value corresponds to the default vCenter Server certificate path.  
 If not specified, it defaults to C:\ProgramData\VMware\VMware VirtualCenter\SSL\rui.crt .
 
 
 
-**vCenterServerFQDN :** To specify the full DNS name of the vCenter Server.
+**vCenterServerFQDN :** To specify the full DNS name of the vCenter Server.  
 This is required if the cmdlet is not run from the vCenter Server itself or if the vCenter server is unable to resolve its own FQDN.  
 If not specified, it defaults to [System.Net.Dns]::GetHostByName((hostname)).HostName .
 
 
 
-**Quiet :** Instead of outputing the result of the test for each requirement, the "quiet" mode just outputs a boolean value : True or False.
-True means that the specified certificate meets all the requirements, False means that it doesn't meet all the requirements.  
-If not specified, it defaults to False .
+**Quiet :** Instead of outputing the result of the test for each requirement, the "quiet" mode just outputs a boolean value : True or False.  
+True means that the specified certificate meets all the requirements, False means that it doesn't meet all the requirements.
 
 
 
