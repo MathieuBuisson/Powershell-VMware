@@ -61,7 +61,7 @@ function Test-VpxdCertificate {
 .EXAMPLE
     Test-VpxdCertificate
 
-    Checks if the certificate located in the default path on the local vCenter Server meets all the requirements.
+    Checks if the certificate located in the default path on the local vCenter Server meets all the requirements for the detected version of vCenter Server.
 
 .EXAMPLE
     Test-VpxdCertificate -CertFilePath $env:USERPROFILE\Desktop\rui.crt -vCenterServerFQDN "VC.vcloud.local" -VpxdVersion 5.x -Verbose
@@ -72,7 +72,7 @@ function Test-VpxdCertificate {
 .EXAMPLE
     Test-VpxdCertificate -Quiet
 
-    Checks if the certificate located in the default path on the local vCenter Server meets all the requirements.
+    Checks if the certificate located in the default path on the local vCenter Server meets all the requirements for the detected version of vCenter Server.
     It outputs a boolean value : True or False. It is True only when the specified certificate meets all the requirements.
 
 .NOTES
@@ -80,7 +80,7 @@ function Test-VpxdCertificate {
     
 .LINK
     For the latest version of this module and its documentation, please refer to :
-    
+    https://github.com/MathieuBuisson/Powershell-VMware/tree/master/Test-VpxdCertificate
 
 #>
 
