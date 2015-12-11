@@ -16,7 +16,7 @@ It requires PowerShell version 3
 Checks if a certificate file meets all the requirements for the vCenter Server 
 certificate (5.x or 6.0).
 
-**Here is the list of requirements which are checked by this cmdlet for vCenter Server 5.x :**
+**Here is the list of requirements for vCenter Server 5.x :**
 
 * Certificate must be X.509 v3.
 * Certificate should begin with : "-----BEGIN CERTIFICATE-----".
@@ -33,7 +33,7 @@ Authentication".
 * The certificate must NOT be a wildcard certificate.
 * The signature hash algorithm must be SHA256, SHA384, or SHA512.  
 
-**Here is the list of requirements which are checked by this cmdlet for vCenter Server 6.0 :**
+**Here is the list of requirements for vCenter Server 6.0 :**
 
 * Certificate must be X.509 v3.
 * Certificate should begin with : "-----BEGIN CERTIFICATE-----".
