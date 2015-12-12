@@ -49,7 +49,7 @@ Encipherment
 * The signature hash algorithm must be SHA256, SHA384, or SHA512.
 
 The cmdlet performs a test for each of the requirement mentioned above and 
-outputs an object with a property corresponding to each of these test.  
+outputs an object with a property corresponding to each of these tests.  
 The value of all these properties is either True or False.  
 True means that the certificate passed the corresponding test and False means that the certificate failed the corresponding test.  
 
