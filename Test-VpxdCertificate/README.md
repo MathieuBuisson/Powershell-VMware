@@ -1,4 +1,4 @@
-﻿##Description :
+﻿## Description :
 
 
 
@@ -8,7 +8,7 @@ It requires PowerShell version 3
 
 
 
-##Test-VpxdCertificate :
+## Test-VpxdCertificate :
 
 
 
@@ -56,7 +56,7 @@ True means that the certificate passed the corresponding test and False means th
 If this function is run from the vCenter Server itself, it will detect the vCenter Server version by itself.
 If it is not run from the vCenter Server itself, the vCenter version ("5.x" or "6.0") needs to be specified using the -VpxdVersion parameter.
 
-###Parameters :
+### Parameters :
 
 
 
@@ -81,7 +81,7 @@ True means that the specified certificate meets all the requirements, False mean
 
 
 
-###Examples :
+### Examples :
 
 
 
